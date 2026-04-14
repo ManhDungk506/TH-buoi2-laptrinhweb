@@ -1,12 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-//import './index.css'
 import App from './App.jsx'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+// 1. Phải import BrowserRouter từ thư viện
+import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    {/* 2. Bọc BrowserRouter ở ngoài cùng của App */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>,
 )
+

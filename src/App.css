@@ -1,4 +1,4 @@
-/* 1. Reset & Base Styles - Xóa bỏ dấu vết của Vite */
+/* 1. Reset & Base Styles */
 #root {
   max-width: 100% !important;
   margin: 0 !important;
@@ -8,161 +8,251 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; /* Font chữ hiện đại hơn */
+  background-color: #fdfdfd;
+  color: #2d3436;
 }
 
-/* 2. Header & Navbar - Làm cho menu nổi bật */
+/* 2. Header & Navbar - mDuwg Homestay Style */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 10% ;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1rem 8%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px); /* Hiệu ứng kính mờ xịn xò */
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
-  color: #007bff;
-  letter-spacing: 1px;
+  color: #008080; /* Màu Teal đặc trưng */
+  letter-spacing: -0.5px;
+  text-transform: lowercase; /* Kiểu mDuwg thường viết cách điệu */
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
-  color: #555;
-  font-weight: 500;
+  color: #636e72;
+  font-weight: 600;
+  font-size: 0.95rem;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #007bff;
+  color: #008080;
 }
 
 .btn-login {
-  background: #007bff;
+  background: #2d3436;
   color: white;
   border: none;
-  padding: 8px 20px;
-  border-radius: 5px;
-  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 100px;
+  font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-/* 3. Hero Section - Chỉnh lại chiều cao và chữ */
+.btn-login:hover {
+  background: #008080;
+  transform: scale(1.05);
+}
+
+/* 3. Hero Section - Cảm giác bình yên */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-              url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1350&q=80');
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1500&q=80');
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 120px 20px;
+  padding: 150px 20px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .search-bar {
   background: white;
-  padding: 15px;
-  border-radius: 50px; /* Làm bo tròn kiểu hiện đại */
+  padding: 10px;
+  border-radius: 100px;
   display: inline-flex;
-  gap: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  gap: 5px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
 }
 
 .search-bar input {
-  border: 1px solid #eee;
-  padding: 12px 20px;
-  border-radius: 30px;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 100px;
   outline: none;
+  width: 250px;
+  font-size: 1rem;
 }
 
 .btn-search {
-  background: #ff5a5f; /* Màu đỏ kiểu Airbnb */
+  background: #e67e22; /* Màu cam đất ấm áp */
   color: white;
   border: none;
-  padding: 0 30px;
-  border-radius: 30px;
-  font-weight: bold;
+  padding: 0 40px;
+  border-radius: 100px;
+  font-weight: 700;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-/* 4. Room List - Chia lưới (Grid) chuẩn */
+.btn-search:hover {
+  background: #d35400;
+  box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+}
+
+/* 4. Room List & Grid */
 .room-list {
-  padding: 60px 10%;
+  padding: 80px 8%;
 }
 
 .room-list h2 {
-  font-weight: 700;
-  margin-bottom: 30px;
-  position: relative;
-  display: inline-block;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #2d3436;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
-/* 5. Room Card - Hiệu ứng Hover xịn */
+/* 5. Room Card - Tinh tế và Sang trọng */
 .room-card {
   background: white;
-  border-radius: 15px;
+  border-radius: 24px; /* Bo tròn mạnh kiểu Trivago/Airbnb */
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-  border: 1px solid #eee;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 
 .room-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
 .room-card img {
   width: 100%;
-  height: 220px;
+  height: 250px;
   object-fit: cover;
+  transition: 0.5s;
+}
+
+.room-card:hover img {
+  transform: scale(1.1);
 }
 
 .room-card h3 {
-  font-size: 1.2rem;
-  margin: 15px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 20px 20px 10px 20px;
 }
 
 .price {
-  color: #007bff;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 0 15px;
+  color: #008080;
+  font-weight: 800;
+  font-size: 1.3rem;
+  padding: 0 20px;
+  margin-bottom: 10px;
 }
 
 .btn-book {
   display: block;
-  width: calc(100% - 30px);
-  margin: 15px auto;
-  padding: 12px;
-  background: #28a745;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
+  width: calc(100% - 40px);
+  margin: 15px auto 25px auto;
+  padding: 14px;
+  background: #f8f9fa;
+  color: #2d3436;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .btn-book:hover {
-  background: #218838;
+  background: #2d3436;
+  color: white;
+}
+
+/* Utility classes */
+.rounded-pill { border-radius: 50px !important; }
+
+/* Làm mượt chuyển động cho nút và link */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #008080;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Đẩy footer xuống dưới cùng nếu nội dung trang ít */
+}
+/* Hiệu ứng cho thanh tìm kiếm */
+.search-wrapper {
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.search-wrapper:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;
+  transform: translateY(-2px);
+}
+
+.search-wrapper input::placeholder {
+  color: #adb5bd;
+  font-size: 0.9rem;
+}
+
+.hotel-card {
+  border-radius: 15px !important;
+  transition: transform 0.3s, box-shadow 0.3s !important;
+}
+
+.hotel-card:hover {
+  transform: scale(1.02) !important;
+}
+
+/* Đảm bảo nút tìm kiếm nổi bật */
+.btn-primary {
+  background-color: #007bff !important;
+  border: none !important;
 }

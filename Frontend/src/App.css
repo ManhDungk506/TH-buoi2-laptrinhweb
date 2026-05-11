@@ -256,3 +256,15 @@ main {
   background-color: #007bff !important;
   border: none !important;
 }
+
+.hotel-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hotel-card:hover {
+  transform: scale(1.02); /* Phóng to nhẹ khi di chuột vào */
+}
+
+.card-link {
+  display: block;
+}
